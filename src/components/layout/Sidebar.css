@@ -1,0 +1,120 @@
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-w);
+  background: var(--bg-elevated);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 24px 18px;
+  z-index: 20;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-h);
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.4px;
+}
+
+.sidebar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: var(--text-dim);
+}
+
+.sidebar-search input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  color: var(--text-h);
+  font-size: 14px;
+}
+
+.sidebar-search input::placeholder {
+  color: var(--text-dim);
+}
+
+.sidebar-search input:focus {
+  outline: none;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 500;
+  font-size: 15px;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: var(--surface);
+  color: var(--text-h);
+}
+
+.sidebar-link.active {
+  background: var(--surface);
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    inset: 0 0 auto 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 14px;
+    gap: 14px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar-logo span {
+    display: none;
+  }
+
+  .sidebar-search {
+    flex: 1;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+
+  .sidebar-link {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 8px;
+  }
+
+  .sidebar-link.active {
+    border-bottom-color: var(--accent);
+  }
+}

@@ -1,0 +1,15 @@
+.app-shell {
+  min-height: 100svh;
+}
+
+.app-content {
+  margin-left: var(--sidebar-w);
+  min-height: 100svh;
+}
+
+@media (max-width: 768px) {
+  .app-content {
+    margin-left: 0;
+    margin-top: 64px;
+  }
+}

@@ -1,0 +1,69 @@
+.media-card {
+  display: block;
+  width: 160px;
+  flex: 0 0 auto;
+}
+
+.media-card-poster {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.15s ease, transform 0.15s ease, filter 0.15s ease;
+}
+
+.media-card-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.media-card:hover .media-card-poster {
+  border-color: var(--accent);
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.media-card-poster .rating-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(11, 12, 18, 0.75);
+  backdrop-filter: blur(2px);
+}
+
+.media-card-title {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.media-card-year {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+@media (max-width: 640px) {
+  .media-card {
+    width: 128px;
+  }
+}

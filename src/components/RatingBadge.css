@@ -1,0 +1,20 @@
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(231, 163, 62, 0.14);
+  color: var(--accent);
+  border-radius: 999px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.rating-badge--sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.rating-badge--md {
+  padding: 6px 12px;
+  font-size: 15px;
+}

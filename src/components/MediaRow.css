@@ -1,0 +1,11 @@
+.media-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 8px;
+}
+
+.media-row > * {
+  scroll-snap-align: start;
+}

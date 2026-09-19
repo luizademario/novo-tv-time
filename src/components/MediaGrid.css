@@ -1,0 +1,9 @@
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 20px 16px;
+}
+
+.media-grid .media-card {
+  width: 100%;
+}
